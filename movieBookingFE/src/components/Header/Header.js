@@ -13,16 +13,16 @@ export default function Header() {
                 <div className="collapse navbar-collapse" id="collapsibleNavId">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li className="nav-item">
-                            <NavLink exact className="nav-link" activeClassName="activeMenuItem" activeStyle={{fontWeight:'bold'}} to="/home">Home <span className="sr-only">(current)</span></NavLink>
+                            <NavLink exact className="nav-link" activeClassName="activeMenuItem" activeStyle={{ fontWeight: 'bold' }} to="/home">Home <span className="sr-only">(current)</span></NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink exact className="nav-link" activeClassName="activeMenuItem" activeStyle={{fontWeight:'bold'}} to="/about">About</NavLink>
+                            <NavLink exact className="nav-link" activeClassName="activeMenuItem" activeStyle={{ fontWeight: 'bold' }} to="/about">About</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink exact className="nav-link" activeClassName="activeMenuItem" activeStyle={{fontWeight:'bold'}} to="/contact">Contact</NavLink>
+                            <NavLink exact className="nav-link" activeClassName="activeMenuItem" activeStyle={{ fontWeight: 'bold' }} to="/contact">Contact</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink exact className="nav-link" activeClassName="activeMenuItem" activeStyle={{fontWeight:'bold'}} to="/login">Login</NavLink>
+                            <NavLink exact className="nav-link" activeClassName="activeMenuItem" activeStyle={{ fontWeight: 'bold' }} to="/login">Login</NavLink>
                         </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>

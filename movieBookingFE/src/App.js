@@ -7,6 +7,7 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
+import TrangChu from './pages/TrangChu/TrangChu';
 import Profile from './Profile/Profile';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="/login" component={Login}></Route>
         <Route exact path="/detail/:id" component={Detail}></Route>
         <Route exact path="/profile" component={Profile}></Route>
+        <Route exact path="/trangchu" component={TrangChu}></Route>
         <Route exact path="/" component={Home}></Route>
         
         <Route exact path="*" component={PageNotFound}></Route>

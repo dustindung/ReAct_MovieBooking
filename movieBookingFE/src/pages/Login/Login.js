@@ -23,7 +23,7 @@ export default function Login(props) {
     console.log(userLogin)
 
     const handleChange = (e) => {
-        const {value, name} = e.target;
+        const { value, name } = e.target;
         // setState({
         //     userLogin: {...useState.userLogin, [name]: value}
         // })
@@ -36,11 +36,11 @@ export default function Login(props) {
     const login = (e) => {
         e.preventDefault(); //Ngăn sự kiện sau khi submit reload lại trang
         //Kiểm tra userName, passWord = cybersoft => Chuyển về trước đó, ngược lại báo lỗi
-        if(userLogin.userName === 'cybersoft' && userLogin.passWord === 'cybersoft'){
+        if (userLogin.userName === 'cybersoft' && userLogin.passWord === 'cybersoft') {
             //props.history.goBack(); 
             //goBack chuyển hướng trang trước link đến trang này
 
-            props.history.push('/home'); 
+            props.history.push('/home');
             //chuyển hướng đến trang (path) chỉ định => home
 
             //props.history.replace('/home'); 
