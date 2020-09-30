@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'; //Thư viện kết nối BackEnd API
-import {layDanhSachPhimApiAction} from '../../redux/actions/QuanLyPhimAction'
-import {connect, useDispatch, useSelector} from 'react-redux';
-import {NavLink} from 'react-router-dom'
+import { layDanhSachPhimApiAction } from '../../redux/actions/QuanLyPhimAction'
+import { connect, useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom'
 
 function Home(props) {
+
+    console.log('props',props)
 
     //Dùng useSelector thay cho mapStateToProps lấy danh sách phim từ reducer về
     const danhSachPhim = useSelector(state => state.QuanLyPhimReducer.dsPhim);
@@ -68,7 +70,7 @@ function Home(props) {
     }
 
     const renderPhim = () => {
-        console.log('dsPhim',props.dsPhim)
+        console.log('dsPhim', props.dsPhim)
 
         return props.dsPhim.map((phim, index) => {
             return <div className="col-4" key={index}>
@@ -111,4 +113,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect (mapStateToProps)(Home);
+export default connect(mapStateToProps)(Home);

@@ -1,4 +1,4 @@
-import {applyMiddleware, combineReducers, createStore} from 'redux';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
 import QuanLyPhimReducer from './reducers/QuanLyPhimReducer';
 import reduxThunk from 'redux-thunk';
 
@@ -12,7 +12,7 @@ const rootReducer = combineReducers({
 
 
 
-const store = createStore(rootReducer,applyMiddleware(reduxThunk));
+const store = createStore(rootReducer, applyMiddleware(reduxThunk));
 
 
 

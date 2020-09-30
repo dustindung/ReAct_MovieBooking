@@ -22,6 +22,9 @@ export default function Header() {
                             <NavLink exact className="nav-link" activeClassName="activeMenuItem" activeStyle={{ fontWeight: 'bold' }} to="/contact">Contact</NavLink>
                         </li>
                         <li className="nav-item">
+                            <NavLink exact className="nav-link" activeClassName="activeMenuItem" activeStyle={{ fontWeight: 'bold' }} to="/hoc">HOC</NavLink>
+                        </li>
+                        <li className="nav-item">
                             <NavLink exact className="nav-link" activeClassName="activeMenuItem" activeStyle={{ fontWeight: 'bold' }} to="/login">Login</NavLink>
                         </li>
                         <li className="nav-item dropdown">
