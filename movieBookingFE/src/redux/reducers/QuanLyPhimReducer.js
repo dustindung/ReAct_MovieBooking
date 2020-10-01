@@ -14,6 +14,9 @@ const QuanLyPhimReducer = (state = stateDefault, action) => {
         }
         case LAY_CHI_TIET_PHIM:{
             state.chiTietPhim = action.chiTietPhim;
+
+
+            console.log('state.chiTietPhim',state.chiTietPhim)
             return {...state}
         }
         default: return state;

@@ -14,6 +14,7 @@ import TrangChu from './pages/TrangChu/TrangChu';
 import Profile from './Profile/Profile';
 import { HomeTemplate } from './templates/HomeTemplates';
 import { AdminTemplate } from './templates/AdminTemplates'
+import Booking from './pages/Booking/Booking';
 
 function App() {
   return (
@@ -38,13 +39,17 @@ function App() {
         </div>
           
         )}} /> */}
-        <Route exact path="/login" Component={Login}></Route>
-        <Route exact path="/detail/:id" Component={Detail}></Route>
-        <Route exact path="/profile" Component={Profile}></Route>
-        <Route exact path="/trangchu" Component={TrangChu}></Route>
+        <Route exact path="/login" component={Login}></Route>
+        <Route exact path="/detail/:id" component={Detail}></Route>
+        <Route exact path="/profile" component={Profile}></Route>
+        <Route exact path="/trangchu" component={TrangChu}></Route>
 
-        <AdminTemplate exact path='/admin/films' Component={FilmsManager} />
-        <AdminTemplate exact path='/admin/users' Component={UsersManager} />
+        <AdminTemplate exact path='/admin/films' component={FilmsManager} />
+        <AdminTemplate exact path='/admin/users' component={UsersManager} />
+
+        <Route exact path="/booking/:maLichChieu" render={(propsRoute)=>{
+          return <Booking {...propsRoute}/>
+        }} />
 
         <HomeTemplate exact path="/" Component={Home}/>
 

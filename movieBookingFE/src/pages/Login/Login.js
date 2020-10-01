@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
+import {useDispatch} from 'react-redux'
+import { dangNhapApiAction } from '../../redux/actions/QuanLyNguoiDungAction'
 
 export default function Login(props) {
+
+    let dispatch = useDispatch();
 
     // const [state, setState] = useState({
     //     userLogin: {
@@ -35,20 +39,26 @@ export default function Login(props) {
 
     const login = (e) => {
         e.preventDefault(); //Ngăn sự kiện sau khi submit reload lại trang
+
+
+        dispatch(dangNhapApiAction(userLogin));
+
         //Kiểm tra userName, passWord = cybersoft => Chuyển về trước đó, ngược lại báo lỗi
-        if (userLogin.userName === 'cybersoft' && userLogin.passWord === 'cybersoft') {
-            //props.history.goBack(); 
-            //goBack chuyển hướng trang trước link đến trang này
+        // if (userLogin.userName === 'cybersoft' && userLogin.passWord === 'cybersoft') {
+        //     //props.history.goBack(); 
+        //     //goBack chuyển hướng trang trước link đến trang này
 
-            props.history.push('/home');
-            //chuyển hướng đến trang (path) chỉ định => home
+        //     props.history.push('/home');
+        //     //chuyển hướng đến trang (path) chỉ định => home
 
-            //props.history.replace('/home'); 
-            //thay đổi thành route tương ứng
+        //     //props.history.replace('/home'); 
+        //     //thay đổi thành route tương ứng
 
-        } else {
-            alert('Login fail !')
-        }
+        //     //Gọi API đăng nhập
+
+        // } else {
+        //     alert('Login fail !')
+        // }
     };
 
     return (
