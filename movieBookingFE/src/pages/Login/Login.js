@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-import {useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 import { dangNhapApiAction } from '../../redux/actions/QuanLyNguoiDungAction'
 
 export default function Login(props) {
 
     let dispatch = useDispatch();
+    let history = useHistory();
 
     // const [state, setState] = useState({
     //     userLogin: {
@@ -41,7 +43,7 @@ export default function Login(props) {
         e.preventDefault(); //Ngăn sự kiện sau khi submit reload lại trang
 
 
-        dispatch(dangNhapApiAction(userLogin));
+        dispatch(dangNhapApiAction(userLogin, history));
 
         //Kiểm tra userName, passWord = cybersoft => Chuyển về trước đó, ngược lại báo lỗi
         // if (userLogin.userName === 'cybersoft' && userLogin.passWord === 'cybersoft') {

@@ -16,6 +16,7 @@ export default (state = initialState, { type, action }) => {
     switch (type) {
         case 'DANG_NHAP':{
             state.userLogin = action.userLogin;
+            console.log(action);
             return{...state}
         }
 

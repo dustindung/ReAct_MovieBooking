@@ -35,7 +35,7 @@ export const layDanhSachPhimApiAction = () => {
     //Thay vì return về object => middleware thunk cho phép mình return về 1 function có tham số là hàm dispatch
     return async dispatch => {
         const {data} = await axios({
-            url: 'http://movie0706.cybersoft.edu.vn/api/quanlyphim/laydanhsachphim?maNhom=GP01',
+            url: 'https://movie0706.cybersoft.edu.vn/api/quanlyphim/laydanhsachphim?maNhom=GP01',
             method: 'GET',
         });
         //Sau khi lấy dữ liệu từ BE về sử dụng hàm dispatch đưa dữ liệu lên reducer
@@ -51,7 +51,7 @@ export const layChiTietPhimAction = (maPhim) => {
     //Thay vì return về object => middleware thunk cho phép mình return về 1 function có tham số là hàm dispatch
     return async dispatch => {
         const {data} = await axios({
-            url: `http://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${maPhim}`,
+            url: `https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${maPhim}`,
             method: 'GET',
         });
         //Sau khi lấy dữ liệu từ BE về sử dụng hàm dispatch đưa dữ liệu lên reducer
